@@ -74,10 +74,12 @@ const links = document.getElementById("navLinks");
 toggle.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
 });
 links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
   links.classList.remove("open");
   toggle.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "";
 }));
 
 // Year (footer is hardcoded 2026 per request, no override needed)
@@ -138,9 +140,7 @@ if (openModalBtn && modal) {
       const result = await response.json();
 
       if (response.status === 200) {
-        alert("Thank you! Your inquiry has been sent. Christian will get back to you within 24 hours.");
-        closeModal();
-        projectForm.reset();
+        window.location.href = "thankyou.html";
       } else {
         alert("Submission failed: " + result.message);
       }
