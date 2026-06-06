@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Christian Arevalo — Freelance Copywriter & Content Writer</title>
+<meta name="description" content="Christian Arevalo is a freelance copywriter and content writer crafting persuasive, conversion-focused copy for landing pages, emails, ads, and social media." />
+<meta name="author" content="Christian Arevalo" />
+<meta property="og:title" content="Christian Arevalo — Freelance Copywriter" />
+<meta property="og:description" content="Words that engage, persuade, and convert. Freelance copywriting and content writing services." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+  .modal.active { display: flex; }
+  .modal-content {
+    background: #fff;
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  .modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+  }
+  .modal-header h2 { font-family: 'Fraunces', serif; font-size: 1.85rem; margin-bottom: 0.5rem; color: #111; }
+  .modal-header p { color: #666; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.5; }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label { display: block; font-weight: 600; font-size: 0.8rem; margin-bottom: 0.5rem; color: #111; text-transform: uppercase; letter-spacing: 0.05em; }
+  .form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+  }
+  .form-input:focus { outline: 2px solid #000; border-color: transparent; background: #fff; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">CA<span>.</span></a>
+    <nav aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Freelance Copywriter & Content Writer</p>
+        <h1>Words That <span class="accent">Engage</span>, Persuade, and Convert.</h1>
+        <p class="lead">I help businesses connect with their audience through compelling copy, engaging content, and conversion-focused messaging.</p>
+        <div class="cta-row">
+          <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <p class="hero-name">— Christian Arevalo</p>
+      </div>
+      <div class="hero-image reveal">
+        <div class="image-frame">
+          <img src="assets/profile.jpg" alt="Christian Arevalo, freelance copywriter, working at his home office" width="896" height="1024" />
+        </div>
+        <div class="floating-badge" aria-hidden="true">
+          <strong>Available</strong><span>for new projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container narrow reveal">
+      <p class="section-tag">About</p>
+      <h2>Persuasive writing, built on research and clarity.</h2>
+      <p class="about-text">
+        Motivated and detail-oriented writer with strong communication, research, and content creation skills. Skilled in crafting persuasive, audience-focused content for digital platforms, marketing campaigns, and business communications. Experienced in adapting tone and messaging to different audiences while maintaining clarity, accuracy, and engagement.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">Skills</p>
+        <h2>What I bring to every project</h2>
+      </div>
+      <ul class="skills-grid" id="skillsGrid">
+        <!-- filled by JS -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">Experience</p>
+        <h2>Freelance Copywriting & Content Writing Projects</h2>
+        <p class="muted">Remote · Portfolio & Practice Projects</p>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section section-alt" id="portfolio">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">Portfolio</p>
+        <h2>Selected work samples</h2>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container narrow reveal">
+      <p class="section-tag">Contact</p>
+      <h2>Let's write something that converts.</h2>
+      <p class="muted">Available for freelance projects, retainers, and one-off campaigns.</p>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Name</span>
+          <span>Christian Arevalo</span>
+        </li>
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:arevalochristian857@gmail.com">arevalochristian857@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact-label">Phone</span>
+          <a href="tel:+639613302244">0961 330 2244</a>
+        </li>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/christian-arevalo-163814388" target="_blank" rel="noopener">linkedin.com/in/christian-arevalo-163814388</a>
+        </li>
+      </ul>
+      <button id="openModal" class="btn btn-primary btn-lg">Start a Project</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 Christian Arevalo. All Rights Reserved.</p>
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <button id="closeModal" class="modal-close" aria-label="Close modal">&times;</button>
+    <div class="modal-header">
+      <h2>Let's Work Together</h2>
+      <p>Tell me about your project and I'll get back to you within 24 hours.</p>
+    </div>
+    <form id="projectForm">
+      <!-- Web3Forms Configuration -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New Project Inquiry from Portfolio">
+      <input type="checkbox" name="botcheck" style="display: none;">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="name" class="form-input" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">Company Name (Optional)</label>
+          <input type="text" id="company" name="company" class="form-input" placeholder="Your Company">
+        </div>
+        <div class="form-group">
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="project_type" class="form-input" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Copywriting">Copywriting</option>
+            <option value="Content Writing">Content Writing</option>
+            <option value="Email Copywriting">Email Copywriting</option>
+            <option value="Social Media Content">Social Media Content</option>
+            <option value="SEO Content">SEO Content</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div id="otherProjectTypeGroup" class="form-group" style="display: none;">
+        <label for="otherProjectType">Please Specify Project Type</label>
+        <input type="text" id="otherProjectType" name="other_details" class="form-input" placeholder="e.g., Technical Whitepaper, Ghostwriting">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="budget">Budget (Optional)</label>
+          <input type="text" id="budget" name="budget" class="form-input" placeholder="e.g. $500 - $1,000">
+        </div>
+        <div class="form-group">
+          <label for="deadline">Deadline (Optional)</label>
+          <input type="text" id="deadline" name="deadline" class="form-input" placeholder="e.g. 2 weeks">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="details">Project Details</label>
+        <textarea id="details" name="message" class="form-input" rows="4" required placeholder="Tell me more about your goals..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; border: none;">Send Project Inquiry</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
